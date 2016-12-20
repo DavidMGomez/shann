@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Shannon-Servicios Profesionales online</title>
+	   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  	<%= csrf_meta_tags %>
+	  	<noscript>
+			<%= stylesheet_link_tag 'bootstrap' %>
+			<%= stylesheet_link_tag 'bootstrap-responsive' %>
+			<%= stylesheet_link_tag 'style' %>
+			<%= stylesheet_link_tag 'pluton' %>
+			<%= stylesheet_link_tag 'jquery.cslider' %>
+			<%= stylesheet_link_tag 'jquery.bxslider' %>
+			<%= stylesheet_link_tag 'animate' %>
+		</noscript>
+	  	 <!-- Load Roboto font -->
+	        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	        <!-- Load css styles 
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/bootstrap.css" />
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetsbootstrap-responsive.css" />
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetsstyle.css" />
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetspluton.css" />
+	        <!--[if IE 7]>
+	            <link rel="stylesheet" type="text/css" href="app/assets/stylesheetspluton-ie7.css" />
+	        <![endif]
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetsjquery.cslider.css" />
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetsjquery.bxslider.css" />
+	        <link rel="stylesheet" type="text/css" href="app/assets/stylesheetsanimate.css" />
+	        <!-- Fav and touch icons >
+	        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+	        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+	        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+	        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+	        <link rel="shortcut icon" href="images/ico/favicon.ico"-->
+			
+	</head>
+	<body>
+        
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a href="#" class="brand">
+                        <%=image_tag("logo.png", height: '40', width: '120')%>
+                        <!--img src="app/assets/images/logo.png" width="120" height="40" alt="Logo" --/>
+                        <!-- This is website logo -->
+                    </a>
+                    <!-- Navigation button, visible on small resolution -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <!-- Main navigation -->
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav" id="top-navigation">
+                            <li class="active">
+                               <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#ofertas">Ofertas Profesionales</a>
+                            </li>
+                            <li>
+                                <a href="#about">Paute con nosotros</a>
+                            </li>
+                            <li>
+                                <a href="about">Registrarse</a>
+                            </li>
+                             <li>
+                                <a href="#about">Ingresar</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+       
+      
+        <%= yield %>
+        
+
+         <!-- Footer section start -->
+        <div class="footer">
+            <p>&copy; 2013 All Rights Reserved</p>
+        </div>
+        <!-- Footer section end -->
+        <!-- ScrollUp button start -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
+        <!-- ScrollUp button end -->
+        <!-- Include javascript -->
+        <%=javascript_include_tag "jquery"%>
+         <%=javascript_include_tag "jquery.mixitup"%>
+          <%=javascript_include_tag "bootstrap"%>
+           <%=javascript_include_tag "modernizr.custom"%>
+             <%=javascript_include_tag "jquery.bxslider"%>
+                <%=javascript_include_tag "jquery.cslider"%>
+              <%=javascript_include_tag "jquery.placeholder"%>
+               <%=javascript_include_tag "jquery.inview"%>
+        <!--
+        <script src="jquery.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/bootstrap.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/modernizr.custom.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/jquery.cslider.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="app/assets/javascripts/jquery.inview.js"></script>
+        <!-- Load google maps api and call initializeMap function defined in app.js -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
+        <!-- css3-mediaqueries.js for IE8 or older -->
+        <!--[if lt IE 9]>
+            <script src="app/assets/javascripts/respond.min.js"></script>
+        <![endif]-->
+         <%=javascript_include_tag "app"%>
+        <!--script type="text/javascript" src="app/assets/javascripts/app.js"></script-->
+	</body>
+</html>
+
+
+    
+   
