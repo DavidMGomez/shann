@@ -6,7 +6,7 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
  */
-jQuery(document).ready(function ($) {
+$(document).on('turbolinks:load',function () {
 
     var lastId,
         topMenu = $("#top-navigation"),
