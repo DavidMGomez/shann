@@ -280,6 +280,7 @@
     <Content Include="Images\logo.png" />
     <Content Include="Images\mislider.jpg" />
     <Content Include="Images\mislider2.jpg" />
+    <Content Include="Images\mislider3.jpg" />
     <Content Include="Images\portfolio\full\item1.jpg" />
     <Content Include="Images\portfolio\full\item2.jpg" />
     <Content Include="Images\portfolio\full\item3.jpg" />
