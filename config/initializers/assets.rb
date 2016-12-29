@@ -9,19 +9,12 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
-Rails.application.config.assets.precompile += %w( bootstrap.css ) #Se precompilan los css
-Rails.application.config.assets.precompile += %w( bootstrap-responsive.css ) 
-Rails.application.config.assets.precompile += %w( style.css ) 
-Rails.application.config.assets.precompile += %w( pluton.css ) 
-Rails.application.config.assets.precompile += %w( jquery.cslider.css )
-Rails.application.config.assets.precompile += %w( jquery.bxslider.css ) 
-Rails.application.config.assets.precompile += %w( animate.css ) 
-Rails.application.config.assets.precompile += %w( jquery.js )
-Rails.application.config.assets.precompile += %w( jquery.mixitup.js )
-Rails.application.config.assets.precompile += %w( bootstrap.js )
-Rails.application.config.assets.precompile += %w( modernizr.custom.js )
-Rails.application.config.assets.precompile += %w( jquery.bxslider.js )
-Rails.application.config.assets.precompile += %w( jquery.cslider.js )
-Rails.application.config.assets.precompile += %w( jquery.placeholder.js )
-Rails.application.config.assets.precompile += %w(  jquery.inview.js )
-Rails.application.config.assets.precompile += %w( app.js )
+
+Rails.application.config.assets.precompile += %w( bootstrap.min.css )
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )
+Rails.application.config.assets.precompile += %w( prettyPhoto.css )
+Rails.application.config.assets.precompile += %w( main.css )
+Rails.application.config.assets.precompile += %w( jquery.isotope.min.js )
+Rails.application.config.assets.precompile += %w( jquery.prettyPhoto.js )
+Rails.application.config.assets.precompile += %w( main.js )
+Rails.root.join('vendor', 'assets', 'fonts')  
