@@ -36,14 +36,16 @@
 			
 	</head>
 	<body>
-        <p class="notice"><%=notice%></p>
-        <p class="alert"><%=alert%></p>
-        <div class="navbar">
+
+        <p class="alert alert-success fade in alert-dismissable"><%=notice%></p>
+        <p class="alert alert-danger fade in alert-dismissable"><%=alert%></p>
+
+        <div class="navbar ">
             <div class="navbar-inner">
                 <div class="container">
                     <a href="/" class="brand">
-                        <%=image_tag("logo.png", height: '40', width: '120')%>
-                        <!--img src="app/assets/images/logo.png" width="120" height="40" alt="Logo" --/>
+                        
+                        <!-img src="app/assets/images/logo.png" width="120" height="40" alt="Logo" --/>
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -53,29 +55,53 @@
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav">
-                            <li class="active">
+                              
+                       
+                             <% if user_signed_in? %>
+                            
+
+                            <li>
+                            <div style="padding-top: 7px;"class="whopic">
+                                    <div class="arrow"></div>
+                                    <img style="width: 50px; height: 50px;" src="assets/Service1.png" class="centered" alt="client 2">
+                                    <%= current_user.email %> 
+                                    </strong>
+                            </div>
+                            </li>
+                            <li>
+                           
+                             <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete  %>
+                            
+                            </li>
+
+                          
+
+                            <% else %>
+                             <li class="active">
                                <a href="/#home">Home</a>
                             </li>
                             <li>
                                 <a href="/welcome/ofertas">Ofertas Profesionales</a>
                             </li>
+                            
                             <li>
                                   <%= link_to "Paute con Nosotros" , "/welcome/publicidad"%>
                                
                             </li>
                             <li>
-                                <%= link_to "Registrarse" , new_user_registration_path%>
-                                
-                            </li>
-                             <li>
-                                 <%= link_to "Iniciar Sesion" , user_session_path%>
-                            </li>
-                           <li>
-                                <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete  %>
-                            </li>
-                            <li>
-                              
-                            </li>
+                          <%= link_to "Registrarse", new_user_registration_path  %> 
+                          </li>
+                      <li>
+                         <%= link_to "Iniciar Sesión", new_user_session_path  %>
+                     </li>
+
+                            <% end %>
+
+
+
+
+                        
+                            
                         </ul>
                     </div>
                     <!-- End main navigation -->
