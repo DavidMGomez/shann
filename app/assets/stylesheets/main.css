@@ -13,7 +13,7 @@ h6 {
   font-weight: 300;
 }
 a {
-  color: #52b6ec;
+  color: #0341ad;
   -webkit-transition: 300ms;
   -moz-transition: 300ms;
   -o-transition: 300ms;
@@ -24,7 +24,7 @@ a {
   border: 0;
 }
 .btn.btn-primary {
-  background-color: #52b6ec;
+  background-color: #0341ad;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary.active {
@@ -133,7 +133,7 @@ a:focus {
   color: #999;
 }
 #contact .box a:hover {
-  color: #52b6ec;
+  color: #0341ad;
 }
 #contact .box input[type="text"],
 #contact .box input[type="email"],
@@ -348,8 +348,8 @@ a:focus {
 }
 #pricing .plan.featured .plan-price {
   color: #fff;
-  background-color: #52b6ec;
-  border-bottom-color: #52b6ec;
+  background-color: #0341ad;
+  border-bottom-color: #0341ad;
   margin: 0;
 }
 #services .box {
@@ -500,7 +500,7 @@ a:focus {
 .navbar-default .navbar-nav > li.active:hover > a:focus,
 .navbar-default .navbar-nav > li:hover > a:focus,
 .navbar-default .navbar-nav > li:focus > a:focus {
-  background-color: #52b6ec;
+  background-color: #0341ad;
   color: #fff;
 }
 .icon-lg {
@@ -561,7 +561,7 @@ a:focus {
   color: #999;
 }
 #footer a:hover {
-  color: #52b6ec;
+  color: #0341ad;
 }
 ul.social {
   list-style: none;
