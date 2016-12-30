@@ -1,72 +1,53 @@
 <section>
-  <div class="container">
-    <div class="box">
-    <div align="center" class="contact_form" id="contact_form">
-             <header>
-                <h2 align="center" >Registro </h2>
-                <p class="textoBlanco">Creará una cuenta de usuario , por favor complete los siguientes campos : </p>
-                 <em class="textoBlanco">Recuerde que los campos con (<font color="red">*</font>) son obligatorios</em>
-
-                  <div align="center">
-                     
-                     <br/><%= devise_error_messages! %>
-                 </div>
-              </header>
-
-               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-
-  <div class="field">
-      <%= f.label :email, "Correo electrónico:" , class:"item"%> <br/>
-   <%= f.email_field :email ,placeholder:"Correo electrónico" ,:required => true,style:" text-align: center; ", class:"item" , pattern:"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"%>
-     <span class="form_hint">Ejemplo : correo@correo.com</span>
-  </div>
-
-  <div class="field">
-    <%= f.label :nombre ,"Nombre:", class:"item" %><br/>
-    <%= f.text_field :nombre, autocomplete: "off" , :required => true , style:" text-align: center;" %>
-    <span class="form_hint">Su nombre o el de su empresa</span>
-  </div>
-
- <div class="field">
-    <%= f.label :telefono ,"Telefono:", class:"item" %><br/>
-    <%= f.text_field :telefono, autocomplete: "off" , style:" text-align: center;" %>
-  </div>
-
-  <div class="field ">
-    <%= f.label :password , "Contraseña: "%><br/>
-    <%= f.password_field :password, autocomplete: "off",placeholder:"Contraseña",:required => true,style:" text-align: center;" ,class:"item" , pattern:".{6,}"%>
-     <% if @minimum_password_length %>
-       <span class="form_hint">(<%= @minimum_password_length %> caracteres como mínimo)</span>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation , "Confirma tu contraseña: " %><br />
-    <%= f.password_field :password, autocomplete: "off",placeholder:"Contraseña",:required => true,style:" text-align: center;" ,class:"item" , pattern:".{6,}"%>
-     <% if @minimum_password_length %>
-       <span class="form_hint">(<%= @minimum_password_length %> caracteres como mínimo)</span>
-    <% end %>
-  </div>
-    </div>
-  <div class="actions" align="center"><br/>
-    <%= f.submit "Sign up" , class:"btn btn-primary "%>
-    <br/><br/><%= render "devise/shared/links" %>
-  </div>
-   
-<% end %>
-
-
-  
-    </div>
-
-
-
-   
-    
-
-  </div>
+   <div class="container">
+      <div class="box">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+         <div align="center" class="contact_form" id="contact_form">
+            <header>
+               <h2 align="center" >Registro </h2>
+               <p class="textoBlanco">Creará una cuenta de usuario , por favor complete los siguientes campos : </p>
+               <em class="textoBlanco">Recuerde que los campos con (<font color="red">*</font>) son obligatorios</em>
+               <div align="center">
+                  <br/><%= devise_error_messages! %>
+               </div>
+            </header>
+           
+            <%= devise_error_messages! %>
+            <div class="field">
+               <%= f.label :email, "Correo electrónico:" , class:"item"%> <br/>
+               <%= f.email_field :email ,placeholder:"Correo electrónico" ,:required => true,style:" text-align: center; ", class:"item" , pattern:"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"%>
+               <span class="form_hint">Ejemplo : correo@correo.com</span>
+            </div>
+            <div class="field">
+               <%= f.label :nombre ,"Nombre:", class:"item" %><br/>
+               <%= f.text_field :nombre, autocomplete: "off" , :required => true , style:" text-align: center;" %>
+               <span class="form_hint">Su nombre o el de su empresa</span>
+            </div>
+            <div class="field">
+               <%= f.label :telefono ,"Telefono:", class:"item" %><br/>
+               <%= f.text_field :telefono, autocomplete: "off" , style:" text-align: center;" %>
+            </div>
+            <div class="field ">
+               <%= f.label :password , "Contraseña: "%><br/>
+               <%= f.password_field :password, autocomplete: "off",placeholder:"Contraseña",:required => true,style:" text-align: center;" ,class:"item" , pattern:".{6,}"%>
+               <% if @minimum_password_length %>
+               <span class="form_hint">(<%= @minimum_password_length %> caracteres como mínimo)</span>
+               <% end %>
+            </div>
+            <div class="field">
+               <%= f.label :password_confirmation , "Confirma tu contraseña: " %><br />
+               <%= f.password_field :password, autocomplete: "off",placeholder:"Contraseña",:required => true,style:" text-align: center;" ,class:"item" , pattern:".{6,}"%>
+               <% if @minimum_password_length %>
+               <span class="form_hint">(<%= @minimum_password_length %> caracteres como mínimo)</span>
+               <% end %>
+            </div>
+           
+         </div>
+          <div class="actions" align="center"><br/>
+               <%= f.submit "Sign up" , class:"btn btn-primary "%>
+               <br/><br/><%= render "devise/shared/links" %>
+            </div>
+         <% end %>
+      </div>
+   </div>
 </section>
-
-
-
