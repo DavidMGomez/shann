@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+.textoBlanco
+{
+   color:white;
+}
 body {
-  background: #e5e5e5;
+  background: #D3D6DC;
   color: #999;
 }
 h1,
@@ -553,6 +557,7 @@ a:focus {
   margin-bottom: 100px;
 }
 #footer {
+  color:#0341ad;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #999;

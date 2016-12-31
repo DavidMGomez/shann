@@ -48,9 +48,9 @@
                                                            
                         <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
                                           
-                        <div style="margin: 12px 0 0 0;"class="col-lg-4">
+                        <div style="margin: 8px 12% 0 12%;"class="col-lg-4">
                           <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Servicios">
+                            <input type="text" class="form-control expansion" placeholder="Buscar servicios, profesionales, empresas">
                             <span class="input-group-btn">
                               <button class="btn btn-primary" type="button">Buscar</button>
                             </span>
@@ -58,17 +58,17 @@
                         </div><!-- /.col-lg-6 -->
                       
 
-                        <li><a href="#services">Ofertas </a></li>
+                        <li><a href="#services">Profesionales</a></li>
                         <li><a href="#portfolio">Paute con nosotros</a></li>
                         <% if user_signed_in? %>
                           
                         
                         <li class="dropdown"> 
-                        <a style="padding:0" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <a style="padding-top:0" class="dropdown-toggle" data-toggle="dropdown" href="#">
                            <div class="member">
                                         <div class="row">
-                                         <img style="float:left;  width: 50px; height: 50px" class="img-responsive  " alt="xdxd" src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg">
-                                         <h4  maxlength="3" style="    color: #000; float:left; margin: 14px 5px 5px 10px"><%= truncate(current_user.email, :length => 15) %><span class="caret"></span> </h4>
+                                         <img style="float:left;  width: 25px; height: 25px; margin-top:15px;" class="img-responsive  " alt="xdxd" src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg">
+                                         <em maxlength="3" style="    color: #000; float:left; margin: 14px 5px 5px 10px ;"><%= truncate(current_user.email, :length => 15) %><span class="caret"></span> </em>
                                          
                                         </div>
                            </div>
@@ -107,7 +107,7 @@
     <footer id="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" style="color:#0341ad;">
                     &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
