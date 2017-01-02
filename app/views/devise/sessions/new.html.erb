@@ -1,16 +1,17 @@
 <section>
   <div class="container" style="padding-top: 5%;">
-    <div class="box" style="padding: 5% 0 10% 0;">
+    <div class="box center gap" style="padding: 5% 0 10% 0;">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div align="center" class="contact_form" id="contact_form" >
           
           <header>
-            <h2>Iniciar Sesion</h2>
+            <h2>Ingresar a su cuenta.</h2>
 
           
             <div class="field">
               <%= f.label :email , "Correo electrónico:" , class:"item"%><br />
               <%= f.email_field :email, autofocus: true %>
+               <span class="form_hint">Ejemplo : correo@correo.com</span>
             </div>
 
             <div class="field">
