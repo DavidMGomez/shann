@@ -1,110 +1,45 @@
-<h1>Resultados obtenidos:</h1>
-<div row>
-	<div class="container">
-		<div class="box">
-			<div class="center gap">
-				
-				<!--/#portfolio-filter-->
-				<ul class="portfolio-items col-4">
-					<li class="portfolio-item apps">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item1.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item1.jpg"><i class="icon-eye-open"></i></a>             
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item joomla bootstrap">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item2.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item2.jpg"><i class="icon-eye-open"></i></a>  
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item bootstrap wordpress">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item3.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item3.jpg"><i class="icon-eye-open"></i></a>        
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item joomla wordpress apps">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item4.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item4.jpg"><i class="icon-eye-open"></i></a>          
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item joomla html">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item5.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item5.jpg"><i class="icon-eye-open"></i></a>          
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item wordpress html">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item6.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item6.jpg"><i class="icon-eye-open"></i></a>           
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item joomla html">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item5.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item5.jpg"><i class="icon-eye-open"></i></a>          
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-					<li class="portfolio-item wordpress html">
-						<div class="item-inner">
-							<div class="portfolio-image">
-								<%=image_tag("/assets/portfolio/thumb/item6.jpg", alt: "xdxd")%>
-								<div class="overlay">
-									<a class="preview btn btn-danger" title="Lorem ipsum dolor sit amet" href="images/portfolio/full/item6.jpg"><i class="icon-eye-open"></i></a>           
-								</div>
-							</div>
-							<h5>Lorem ipsum dolor sit amet</h5>
-						</div>
-					</li>
-					<!--/.portfolio-item-->
-				</ul>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+
+	$(document).ready(function() {
+		$('#list').click(function(event){event.preventDefault();$('#products .item').addClass('list-group-item');});
+		$('#grid').click(function(event){event.preventDefault();$('#products .item').removeClass('list-group-item');$('#products .item').addClass('grid-group-item');});
+	});
+	
+</script>
+<div class="row" style="padding-left: 5%;">
+	<h1>Resultados obtenidos:</h1>
+
+	<div class="well well-sm">
+		<div class="btn-group">
+			<a href="#" id="grid" class="btn btn-default btn-sm"><span
+				class="glyphicon glyphicon-th"></span>Galeria</a>
 			</div>
-			<!--/.box-->
 		</div>
-		<!--/.container-->
-	</div>
+
+
+
+		<div id="products" class="row list-group">
+			<%for i in 1..9%>
+			<div class=" col-sm-6 col-md-4 col-xs-12 col-lg-3">
+				<div class="thumbnail">
+					<h4>
+						Andres Vidal Zemanate 
+						<span class="label label-info info">
+							<span data-toggle="tooltip" title="viewed">257 <b class="glyphicon glyphicon-eye-open"></b></span>
+							<span data-toggle="tooltip" title="viewed">3 <b class="glyphicon glyphicon-star"></b></span>
+							<span data-toggle="tooltip" title="Bootstrap version">3.0.3</span>
+						</span>
+					</h4>
+					<%=image_tag("/assets/portfolio/thumb/item3.jpg", alt: "xdxd" ,class: "list-group-image")%>
+					<a href="http://bootsnipp.com/snippets/featured/post-thumbnail-list" class="btn btn-primary col-xs-12" role="button">Ver mas <span class="glyphicon glyphicon-eye-open"></span></a>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<%end%>
+		</div>
+
+
+

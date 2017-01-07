@@ -1,93 +1,49 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Xeon | OnePage Responsive Theme</title>
-      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
-      <%stylesheet_link_tag "bootstrap.min.css"%>
-      <%stylesheet_link_tag "font-awesome.min.css"%>
-      <%stylesheet_link_tag "prettyPhoto.css"%>
-      <%stylesheet_link_tag "main.css"%>
-      <%favicon_link_tag "/assets/ico/favicon.ico"%>
-   </head>
-   <body  data-spy="scroll" data-target="#navbar" data-offset="0">
-      <header id="header" role="banner">
-         <div class="container">
-            <div id="navbar" class="navbar navbar-inverse">
-               <div class="navbar-header">                       
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  </button>
-               </div>
-               <div class="collapse navbar-collapse">
-                  <div class="collapse navbar-collapse">
-                     <div class="row">
-                        <ul class="nav navbar-nav">
-                           <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
-                           <div style="margin: 8px 12% 0 12%;"class="col-lg-4">
-                              <div class="input-group">
-                                 <input type="text" class="form-control expansion" placeholder="Buscar servicios, profesionales, empresas">
-                                 <span class="input-group-btn">
-                                 <button class="btn btn-primary" type="button">Buscar</button>
-                                 </span>
-                              </div>
-                              <!-- /input-group -->
-                           </div>
-                           <!-- /.col-lg-6 -->
-                           <li><a href="#services">Profesionales</a></li>
-                           <li><%=link_to "Paute con nosotros","/welcome/publicidad"%></li>
-                           <% if user_signed_in? %>
-                           <li class="dropdown">
-                              <a style="padding-top:0" class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                 <div class="member">
-                                    <div class="row">
-                                       <img style="float:left;  width: 25px; height: 25px; margin-top:15px;" class="img-responsive  " alt="xdxd" src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg">
-                                       <em maxlength="3" style="    color: #000; float:left; margin: 14px 5px 5px 10px ;"><%= truncate(current_user.email, :length => 15) %><span class="caret"></span> </em>
-                                    </div>
-                                 </div>
-                              </a>
-                              <ul class="dropdown-menu dropdown-menu-right">
-                                 <li><%=link_to "Editar mis datos" ,  edit_user_registration_path%></li>
-                                 <li><%=link_to "Cerrar sesion" ,  destroy_user_session_path,method: :delete %></li>
-                              </ul>
-                           </li>
-                           <%else %>
-                           <li><%=link_to "Registrarse" , new_user_registration_path %></li>
-                           <li><%=link_to "Ingresar" , new_user_session_path %></li>
-                           <% end %>
-                        </ul>
-                     </div>
-                  </div>
-                  <!-- /.row -->
-               </div>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <title>Xeon | OnePage Responsive Theme</title>
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= csrf_meta_tags %>
+   <%stylesheet_link_tag "bootstrap.min.css"%>
+   <%stylesheet_link_tag "font-awesome.min.css"%>
+   <%stylesheet_link_tag "prettyPhoto.css"%>
+   <%stylesheet_link_tag "main.css"%>
+   <%favicon_link_tag "/assets/ico/favicon.ico"%>
+</head>
+<body  data-spy="scroll" data-target="#navbar" data-offset="0">
+   <header id="header" role="banner">
+      <div class="container">
+        <%if user_signed_in?%>
+            <%=render 'welcome/navegacionSimple'%>
+        <%else%>
+            <%=render 'welcome/navegacionSimple'%>
+        <%end%>
+      </div>
+   </header>
+   <!--/#header-->
+   <%=yield%>
+   <footer id="footer">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-6" style="color:#0341ad;">
+               &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+            </div>
+            <div class="col-sm-6">
+               <img class="pull-right" src="/assets/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">
             </div>
          </div>
-      </header>
-      <!--/#header-->
-      <%=yield%>
-      <footer id="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-6" style="color:#0341ad;">
-                  &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
-               </div>
-               <div class="col-sm-6">
-                  <img class="pull-right" src="/assets/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!--/#footer-->
-      <%javascript_include_tag "jquery.isotope.min" %>
-      <%javascript_include_tag "jquery.prettyPhoto" %>
-      <%javascript_include_tag "main" %>
-   </body>
+      </div>
+
+      
+   </footer>
+   <!--/#footer-->
+   <%javascript_include_tag "jquery.isotope.min" %>
+   <%javascript_include_tag "jquery.prettyPhoto" %>
+   <%javascript_include_tag "main" %>
+</body>
 </html>
