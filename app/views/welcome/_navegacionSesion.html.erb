@@ -12,7 +12,7 @@
                   <div class="row">
                      <ul class="nav navbar-nav">
                         <li class="active"><a href="/"><i class="icon-home"></i></a></li>
-                        <div style="margin: 8px 12% 0 12%;"class="col-lg-4">
+                        <div style="margin: 8px 10% 0 10%;"class="col-lg-4">
                            <div class="input-group">
                               <input type="text" class="form-control expansion" placeholder="Buscar servicios, profesionales, empresas">
                               <span class="input-group-btn">
@@ -22,7 +22,8 @@
                            <!-- /input-group -->
                         </div>
                         <!-- /.col-lg-6 -->
-                        <li><a href="/#services">Profesionales</a></li>
+                        <li><%=link_to "Mi perfil" , profile_index_path %></li>
+                         <li><a href="/#services">Notificaciones</a></li>
                         <li><%=link_to "Paute con nosotros","/welcome/publicidad"%></li>
                         <% if user_signed_in? %>
                         <li class="dropdown">
