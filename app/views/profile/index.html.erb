@@ -1,47 +1,105 @@
-<section style="padding-top: 4%;">
+    <section style="padding-top: 4%;">
+    
     <div class="container" style="padding-top: 2%;">
-        <div class="box  gap">
-            <div class="row">
-             <div class="col-xs-12 col-sm-6 col-md-6">
-                <div class="well well-sm">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                            <%=image_tag("/assets/portfolio/thumb/item3.jpg", alt: "xdxd" ,class: "img-rounded img-responsive imagen-perfil")%>
-                        </div>
-                        <div class="col-sm-6 col-md-8">
-                            <h4>
-                                Bhaumik Patel</h4>
-                                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
-                                </i></cite></small>
-                                <p>
-                                    <i class="glyphicon glyphicon-envelope"></i>email@example.com
-                                    <br />
-                                    <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                                    <br />
-                                    <i class="glyphicon glyphicon-gift"></i>June 02, 1988</p>
-                                    <!-- Split button -->
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-primary">
-                                            Social</button>
-                                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                                <span class="caret"></span><span class="sr-only">Social</span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Twitter</a></li>
-                                                <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
-                                                <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="#">Github</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        
+        <br><br>
+
+        <div class="row">              
+
+                       
+                        <div class="col-sm-3 col-md-3">
+                            <div class="container box" style="aling:center">
+                           
+                            
+                            <a href="">
+                            
+                            <img alt: "xdxd" class="img-rounded img-responsive imagen-perfil " src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg" >
+                               
+                                <a href="">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                                <a href="">
+                                    <span class="glyphicon glyphicon-camera"></span>
+                                </a>                            
+                            
+                            </a>
+                                <div>
+                                        <h4> <%= current_user.nombre%> </h4>
+                                        
+                                        <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                                        </i></cite></small>
+                                        <p>
+                                            <i class="glyphicon glyphicon-envelope"></i><%= current_user.email%> 
+                                            <br />
+                                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                                        </p>
+                                            <!-- Split button -->
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-primary">
+                                                    Social</button>
+                                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                                        <span class="caret"></span><span class="sr-only">Social</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Twitter</a></li>
+                                                        <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+                                                        <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Github</a></li>
+                                                    </ul>
+                                                </div>
+                                        
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+                                <a href="<%=edit_user_registration_path%>">
+                                            <span style=" float: right;" class="glyphicon glyphicon-pencil"></span>
+                                </a>
+
+                                 </div>
+
+                         </div>
+
+                         <div style="padding:inherit" class="col-sm-9 col-md-9">
+                             
+                               <div class="container">
+                                
+                               </div>
+                               
+                         </div>
+
+
+     </div>
+
+    <br>
+
+     <div class="row">              
+
+     <div class="container bootstrap snippet">
+    
+    <div class="row box">
+        <div class="col-md-12">
+            <div class="blog-comment">
+                <h3 class=>Comentarios</h3>
+                <hr/>
+                <ul class="comments">
+                <li class="clearfix">
+                  <img src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg" class="avatar" alt="">
+                  <div class="post-comments">
+                      <p class="meta">Dic 18, 2014 <a href="#">David</a> comento: <i class="pull-right"><a href="#"><small>Responder</small></a></i></p>
+                      <p>
+                         que onda que pez :v
+                      </p>
+                  </div>
+                </li>
+               </ul>
+           </div>
+       </div>
+    </div>
+
+
+     </div>
+    </div>
+</section>
 
 
 
