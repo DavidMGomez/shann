@@ -1,9 +1,7 @@
     <section style="padding-top: 4%;">
     
     <div class="container" style="padding-top: 2%;">
-        
-        <br><br>
-
+       
         <div class="row">              
 
                        
@@ -12,7 +10,15 @@
                            
                             
                             <a href="">
-                            
+                                 <h5>Reputación</h5>
+                                      <span style="color: rgb(255, 213, 90);" class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                      </span>
+
                             <img alt: "xdxd" class="img-rounded img-responsive imagen-perfil " src="/assets/team2-3e323bf86f1e60cd0ae1230cacb11042099e481af1ae7fe5d17cb3b4cecb2bbc.jpg" >
                                
                                 <a href="">
@@ -24,6 +30,8 @@
                             
                             </a>
                                 <div>
+
+                                     
                                         <h4> <%= current_user.nombre%> </h4>
                                         
                                         <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
@@ -47,7 +55,8 @@
                                                         <li class="divider"></li>
                                                         <li><a href="#">Github</a></li>
                                                     </ul>
-                                                </div>
+                                          </div>
+
                                         
                                 </div>
 
@@ -60,12 +69,89 @@
                          </div>
 
 
-                         <div style="padding:inherit" class="col-sm-4 col-md-4">
-                             
-                               <div class="container box">
-                                <h3>Perfil Profesional</h3>
+                         <div style="padding:inherit" class="col-sm-9 col-md-9">
+
+                        <div class="container box">
+                          
+                          <div class="panel-group" id="accordion">
+                          
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
                                 
-                               </div>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-info-sign"></span>
+                                </span>Informacion profesional</a>
+
+                              </h4>
+                            </div>
+                             <div id="collapseOne" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                   <div class="box">
+                                    <h3>Perfil Profesional</h3>
+
+                                   <h5>Descripcion:</h5>
+                                   <p>. es una empresa especializada en servicios de Construcción de Obra Civil, Diseño Arquitectónico. Estamos certificados en INSTALACION DE GYPLAC REVOQUE e INSTALACIÓN DE IMPERMEABILIZANTES DE PRODUCTOS FIBERGLASS. También contamos con suministro de personal altamente calificado y capacitado para el manejo de: Obras civiles (Adecuaciones, Remodelaciones, Acabados, Diseños): mantenimientos de equipos eléctricos (subestaciones, aires acondicionados, luminarias); comercialización de planes de vivienda, diseño y ejecución de proyectos residenciales e industriales (planos, diseños, esquemas y proyectos), suministro e instalación de sistemas domóticos e Inmoticos. Contamos con el apoyo de un recurso humano altamente calificado y con el direccionamiento de un grupo de arquitectos, ingen</p>
+                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-bell"></span>Servicios</a>
+                              </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <table class="table">
+                                  <tr>
+                                    <td>
+                                      <a href="http://www.jquery2dotnet.com">Abogados</a> 
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="http://www.jquery2dotnet.com">Albañiles</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="http://www.jquery2dotnet.com">Artistas</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="http://www.jquery2dotnet.com">Banqueros</a>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      <a>Todas las categorias: </a><br/><br/>
+                                      <select class="form-control">
+                                        <option><a>Celadores</a></option>
+                                        <option><a>Medico general</a></option>
+                                        <option><a>Profesores</a></option>
+                                        <option><a>Porteros</a></option>
+                                        <option><a>Zapateros</a></option>
+                                      </select>
+
+                                    </td>
+                                  </tr>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                      
+                        </div>
+
+
+                             
+                                
+
                                
                          </div>
 
