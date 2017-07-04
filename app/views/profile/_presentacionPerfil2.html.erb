@@ -1,0 +1,42 @@
+ <ul class="navigation">
+            <li class="active">
+               <a data-toggle="tab" href="#information">
+               <span class="glyphicon glyphicon-user"> Informacion</span>
+               </a>
+            </li>
+            <li>
+               <a data-toggle="tab" href="#services">
+               <span class="glyphicon glyphicon-flag"> Servicios</span>
+               </a>
+            </li>
+            <li>
+               <a data-toggle="tab" href="#settings">
+               <span class="glyphicon glyphicon-star"> Calificacion</span>
+               </a>
+            </li>
+            <li>
+               <a data-toggle="tab" href="#email">
+               <span class="glyphicon glyphicon-envelope"> Contactar</span>
+               </a>
+            </li>
+           
+         </ul>
+         <div class="user-body">
+            <div class="tab-content">
+               <div id="information" class="tab-pane active">
+                  
+                  <%= render 'informacionPerfil'%>
+               </div>
+
+
+               <div id="settings" class="tab-pane">
+                  <h4>Settings</h4>
+               </div>
+               <div id="email" class="tab-pane">
+                  <h4>Send Message</h4>
+               </div>
+               <div id="services" class="tab-pane">
+                    <%= render 'serviciosPerfil'%>
+               </div>
+            </div>
+         </div>

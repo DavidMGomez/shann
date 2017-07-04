@@ -1,0 +1,99 @@
+<script type="text/javascript">
+   $(document).ready(function () {
+         $('.collapse.in').prev('.panel-heading').addClass('active');
+         $('#accordion, #bs-collapse')
+             .on('show.bs.collapse', function (a) {
+                 $(a.target).prev('.panel-heading').addClass('active');
+             })
+             .on('hide.bs.collapse', function (a) {
+                 $(a.target).prev('.panel-heading').removeClass('active');
+             });
+     });      
+</script>
+<div class="well well-sm well-primary">
+
+
+   <h3><strong>Listado de Servicios : </strong></h3>
+        <br/>
+   <h5><strong>A continuacion ,  usted podrá ver un listado con los servicios profesionales  o trabajos capaz de realizar ésta persona / negocio :</strong></h5>
+   <br/>
+
+  <div class="panel-group" id="accordion">
+     <%for i in 1..8%>
+         <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-ok"></span>Desarrollo de paginas web</a>
+            </h4>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="container">
+                     <h5><strong>Descripcion : </strong></h5>
+               <p>Hola pinche putita.
+                 Te pones bien cachonda hija de tu puta madre. Quisiera mamartela y saber mamarte meterte la lengua hasta donde no hija de tu puta madre.
+                </p>
+                <br/>
+
+                <h5><strong>Imagenes de Referencia : </strong></h5>
+            <div class="container">
+              <div class='row'>
+                 <div class="carousel slide media-carousel" id="media">
+                    <div class="carousel-inner">
+                       <div class="item  active">
+                          <div class="row">
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="item">
+                          <div class="row">
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="item">
+                          <div class="row">
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                             <div class="col-md-4">
+                                <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150"></a>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                    <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                    <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                 </div>
+              </div>
+            </div>      
+                </div>
+              
+
+            </div>
+        </div>
+    </div>   
+      <%end%>
+  </div>
+     
+   
+</div>
+
