@@ -4,8 +4,13 @@
    color:white;
 }
 body {
-  background: #E3E8F1;
+
+  
   color: #999;
+}
+
+body {
+    background: rgba(3, 65, 173, 0.15) !important;
 }
 h1,
 h2,
