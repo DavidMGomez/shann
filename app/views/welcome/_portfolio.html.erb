@@ -1,37 +1,126 @@
 <section id="portfolio">
- <div class="container">
-   <div class="box first">
-    <div class="center gap">
-      <h2>Profesionales destacados</h2>
-      <!--/#portfolio-filter-->
-      <ul class="portfolio-items col-4">
-
-      </ul>
-      <div class="box">
-        <div class="row">
-          <%for i in 1..8%>
-          <div class=" col-sm-6 col-md-4 col-xs-12 col-lg-3">
-            <div class="thumbnail">
-              <h4>
-                <span class="label label-info info">
-                  <span data-toggle="tooltip" title="viewed">257 <b class="glyphicon glyphicon-eye-open"></b></span>
-                  <span data-toggle="tooltip" title="viewed">3 <b class="glyphicon glyphicon-star"></b></span>
-                  <span data-toggle="tooltip" title="Bootstrap version">3.0.3</span>
-                </span>
-              </h4>
-              <%=image_tag("/assets/perfil/perfilDefault.png", alt: "perfilDefault" ,class: "list-group-image")%>
-              <a  href="/profile/index" class="btn btn-primary col-xs-12"><em>Andres Vidal Zemanate</em>  </a>
-              <div class="clearfix"></div>
+   <div class="container">
+      <div class="box first">
+         <div class="center gap">
+            <div class="row" >
+               <div class="col-md-3">
+                  <div class="well" style="padding-bottom: 128px;">
+                     <h3 style="text-align: left;">Filtrar por : </h3>
+                     <br/><br/>
+                     <h4 style="text-align: left;">Ubicacion : </h4>
+                     <br/>
+                     <div class="panel-body">
+                        <table class="table ">
+                           <tr>
+                              <td>
+                                 <a  data-filter="*"  style="float: left;">Bogotá</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a data-filter=".bootstrap" style="float: left;">Medellin</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a data-filter=".html"  style="float: left;">Cali</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a  data-filter=".wordpress"  style="float: left;">Ibagué</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com"  style="float: left;">Pasto</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com"  style="float: left;">Santa marta</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com"  style="float: left;">Cartagena</a>
+                                 <span class="badge" style="float: left;">42</span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a style="float: left;">Mas Ubicaciones: </a><br/><br/>
+                                 <select class="form-control">
+                                    <option><a>Popayan</a></option>
+                                    <option><a>Pereira</a></option>
+                                    <option><a>Armenia</a></option>
+                                    <option><a>Mocoa</a></option>
+                                    <option><a>Villavicencio</a></option>
+                                 </select>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-8 col-md-9">
+                  <div class="well">
+                     <h3 style="text-align: left;">Profesionales destacados en <a href="http://www.jquery2dotnet.com">Popayan : </a> </h3>
+                     <%= render 'sugeridosIndex'%>
+                  </div>
+               </div>
             </div>
-          </div>
-          <%end%>
-        </div>
+            <div class="row">
+               <div class="col-md-3">
+               </div>
+               <div class="col-sm-8 col-md-9" style="padding-bottom: 15px;">
+                  <div class="row">
+                     <h3 style="float: left;">Selecciona una categoria especifica</h3>
+                  </div>
+               </div>
+            </div>
+
+            <div class="row text-center">
+               <div class="container">
+                
+               
+                  <%for i in 1..5%>
+                         <div class="col-md-3">
+                     <div class="row" style="width: 80%; padding-top: 15px;">
+                        <h4>Ingenieros</h4>
+                        <br/>
+
+                             <div class="panel-body">
+                        <table class="table ">
+                 
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com">Ingeniero Sistemas</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com">Ingeniero Civil</a>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <a href="http://www.jquery2dotnet.com">Ingeniero Industrial</a>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                     </div>
+                  </div>
+   
+                  <%end%>
+                 
+              
+               </div>
+               
+            </div>
+         </div>
       </div>
-      <!--/.box-->
-    </div>
-  </div>
-</div>
-
-
+   </div>
 </section>
 <!--/#portfolio-->

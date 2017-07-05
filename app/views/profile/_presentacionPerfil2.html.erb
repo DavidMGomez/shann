@@ -10,12 +10,12 @@
                </a>
             </li>
             <li>
-               <a data-toggle="tab" href="#settings">
+               <a data-toggle="tab" href="#valoracion">
                <span class="glyphicon glyphicon-star"> Valoracion de la comunidad</span>
                </a>
             </li>
             <li>
-               <a data-toggle="tab" href="#email">
+               <a data-toggle="tab" href="#contactar">
                <span class="glyphicon glyphicon-envelope"> Contactar</span>
                </a>
             </li>
@@ -27,16 +27,15 @@
                   
                   <%= render 'informacionPerfil'%>
                </div>
-
-
-               <div id="settings" class="tab-pane">
-                  <h4>Settings</h4>
+               <div id="valoracion" class="tab-pane">
+                   <%= render 'valoracionPerfil'%>
                </div>
-               <div id="email" class="tab-pane">
-                  <h4>Send Message</h4>
-               </div>
+             
                <div id="services" class="tab-pane">
                     <%= render 'serviciosPerfil'%>
+               </div>
+                 <div id="contactar" class="tab-pane">
+                   <%= render 'contactarPerfil'%>
                </div>
             </div>
          </div>
